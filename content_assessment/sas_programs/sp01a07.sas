@@ -1,0 +1,12 @@
+************************************************************;
+*  Activity 1.07                                           *;
+*    1) Submit the program and examine the results.        *;
+*    2) Notice that the mpg_groups format is not applied.  *;
+*    3) Edit the autoexec file as indicated.               *;
+*    4) Submit the program and verify the format is applied*;
+************************************************************;
+proc freq data=sashelp.cars;
+	tables mpg_highway;
+	format mpg_highway mpg_groups.;
+	title "Fuel Efficiency by Groups";
+run;
